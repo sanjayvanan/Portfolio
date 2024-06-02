@@ -55,7 +55,7 @@ const Works = () => {
 								alt="twitter"
 								className="work-image"
 							/>
-							<div className="work-title">Paper Presentation</div>
+							<div className="work-title">Inter Department Hackathon</div>
 							<div className="work-subtitle">
 								Won
 							</div>
