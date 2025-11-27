@@ -26,6 +26,19 @@ const Works = () => {
 							<div className="work-duration">3 months</div>
 						</div>
 
+						<div className="work">
+							<img
+								src="./zoshLogo.png"
+								alt="facebook"
+								className="work-image"
+							/>
+							<div className="work-title">Zosh Aerospace</div>
+							<div className="work-subtitle">
+								Deputy Software Engineer
+							</div>
+							<div className="work-duration">Aug 2024 - present</div>
+						</div>
+
 						
 					</div>
 				}
