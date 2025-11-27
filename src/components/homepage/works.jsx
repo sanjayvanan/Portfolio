@@ -72,7 +72,7 @@ const Works = () => {
 							<div className="work-subtitle">
 								Won
 							</div>
-							<div className="work-duration">2023</div>
+							<div className="work-duration">2024</div>
 						</div>
 					</div>
 				}
