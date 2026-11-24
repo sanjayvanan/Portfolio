@@ -1,14 +1,27 @@
 :root {
 	/* ------- colors ------- */
-	--primary-color: #27272a;
-	--secondary-color: #000000;
-	--tertiary-color: #acacb4;
-	--quaternary-color: #e4e4e7;
-	--link-color: #14b8a6;
+	--bg: #0c0d0b;
+	--bg-raised: #131510;
+	--panel: rgba(236, 232, 220, 0.035);
+	--panel-strong: rgba(236, 232, 220, 0.06);
+	--line: rgba(236, 232, 220, 0.1);
+	--line-strong: rgba(236, 232, 220, 0.2);
+	--text: #ece8dc;
+	--muted: #9c988b;
+	--dim: #6b685f;
+	--accent: #ffb02e;
+	--accent-soft: rgba(255, 176, 46, 0.14);
+	--mint: #7ee0c3;
+	--mint-soft: rgba(126, 224, 195, 0.12);
 	/* ---------------------- */
 
 	/* ------- fonts ------- */
-	--primary-font: "Heebo", sans-serif;
-	--secondary-font: "Roboto", sans-serif;
+	--display-font: "Instrument Serif", Georgia, serif;
+	--body-font: "Hanken Grotesk", "Helvetica Neue", sans-serif;
+	--mono-font: "JetBrains Mono", ui-monospace, Menlo, monospace;
 	/* --------------------- */
+
+	--radius: 18px;
+	--max: 1180px;
+	--ease: cubic-bezier(0.2, 0.7, 0.1, 1);
 }

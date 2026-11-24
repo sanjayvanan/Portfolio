@@ -1,0 +1,38 @@
+@import "../../../data/styles.css";
+
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	flex-wrap: wrap;
+	margin-top: 120px;
+	padding: 28px 0 40px;
+	border-top: 1px solid var(--line);
+}
+
+.footer-right {
+	display: flex;
+	gap: 22px;
+	font-size: 14.5px;
+}
+
+.footer-right a {
+	color: var(--muted);
+	transition: color 0.2s;
+}
+
+.footer-right a:hover {
+	color: var(--accent);
+}
+
+.footer-mid {
+	color: var(--dim);
+}
+
+@media (max-width: 760px) {
+	.footer {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}

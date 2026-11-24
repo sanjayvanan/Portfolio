@@ -1,0 +1,148 @@
+@import "../../../data/styles.css";
+
+.cover {
+	position: relative;
+	height: 100%;
+	min-height: 260px;
+	overflow: hidden;
+	border-radius: 14px;
+	border: 1px solid var(--line);
+	background:
+		radial-gradient(120% 90% at 85% 10%, rgba(255, 176, 46, 0.22), transparent 55%),
+		linear-gradient(180deg, #171811, #0f100d);
+}
+
+.cover::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-image: linear-gradient(var(--line) 1px, transparent 1px),
+		linear-gradient(90deg, var(--line) 1px, transparent 1px);
+	background-size: 28px 28px;
+	opacity: 0.55;
+}
+
+/* ---- auction ---- */
+.cover-bars {
+	position: absolute;
+	left: 8%;
+	right: 8%;
+	bottom: 0;
+	height: 70%;
+	display: flex;
+	align-items: flex-end;
+	gap: 6%;
+}
+
+.cover-bars span {
+	flex: 1;
+	border-radius: 6px 6px 0 0;
+	background: linear-gradient(180deg, var(--accent), rgba(255, 176, 46, 0.08));
+	transform-origin: bottom;
+	animation: rise 2.8s var(--ease) infinite alternate;
+	opacity: 0.85;
+}
+
+@keyframes rise {
+	from { transform: scaleY(0.72); }
+	to { transform: scaleY(1); }
+}
+
+.cover-ticket {
+	position: absolute;
+	top: 22px;
+	left: 22px;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	padding: 12px 16px;
+	border-radius: 12px;
+	background: rgba(12, 13, 11, 0.78);
+	border: 1px solid var(--line-strong);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	font-family: var(--mono-font);
+}
+
+.cover-ticket-label {
+	font-size: 10.5px;
+	letter-spacing: 0.12em;
+	color: var(--accent);
+}
+
+.cover-ticket-value {
+	font-size: 20px;
+	color: var(--text);
+}
+
+.cover-ticket-delta {
+	font-size: 11px;
+	color: var(--muted);
+}
+
+/* ---- radar ---- */
+.cover-radar {
+	background:
+		radial-gradient(120% 90% at 20% 90%, rgba(126, 224, 195, 0.2), transparent 55%),
+		linear-gradient(180deg, #11150f, #0d0f0c);
+}
+
+.radar {
+	position: absolute;
+	right: -8%;
+	top: 50%;
+	width: 340px;
+	height: 340px;
+	transform: translateY(-50%);
+	border-radius: 50%;
+	background: repeating-radial-gradient(circle, transparent 0 38px, rgba(126, 224, 195, 0.22) 38px 39px);
+	border: 1px solid rgba(126, 224, 195, 0.35);
+	overflow: hidden;
+}
+
+.radar-sweep {
+	position: absolute;
+	inset: 0;
+	border-radius: 50%;
+	background: conic-gradient(from 0deg, rgba(126, 224, 195, 0.45), transparent 70deg);
+	animation: sweep 4s linear infinite;
+}
+
+@keyframes sweep {
+	to { transform: rotate(360deg); }
+}
+
+.radar-zone {
+	position: absolute;
+	top: 46%;
+	left: 22%;
+	width: 26%;
+	height: 24%;
+	border: 1px dashed var(--accent);
+	transform: rotate(-12deg);
+	background: rgba(255, 176, 46, 0.07);
+}
+
+.radar-blip {
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: var(--mint);
+	box-shadow: 0 0 0 0 rgba(126, 224, 195, 0.6);
+	animation: ping 2.4s ease-out infinite;
+}
+
+.radar-blip-alert {
+	background: var(--accent);
+	animation-delay: 0.8s;
+}
+
+@keyframes ping {
+	0% { box-shadow: 0 0 0 0 rgba(126, 224, 195, 0.55); }
+	100% { box-shadow: 0 0 0 16px rgba(126, 224, 195, 0); }
+}
+
+.cover-ticket-mint .cover-ticket-label {
+	color: var(--mint);
+}

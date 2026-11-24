@@ -1,0 +1,171 @@
+@import "../../data/styles.css";
+
+.pd {
+	padding-top: 130px;
+}
+
+.pd-back {
+	display: inline-block;
+	padding: 8px 14px;
+	border-radius: 999px;
+	border: 1px solid var(--line);
+	transition: color 0.2s, border-color 0.2s;
+}
+
+.pd-back:hover {
+	color: var(--accent);
+	border-color: var(--accent);
+}
+
+.pd-head {
+	margin-top: 44px;
+}
+
+.pd-kicker {
+	color: var(--accent);
+}
+
+.pd-title {
+	margin: 14px 0 0;
+	font-family: var(--display-font);
+	font-weight: 400;
+	font-size: clamp(54px, 9vw, 128px);
+	line-height: 0.92;
+	letter-spacing: -0.02em;
+}
+
+.pd-tagline {
+	margin: 18px 0 0;
+	max-width: 640px;
+	color: var(--muted);
+	font-size: 20px;
+}
+
+.pd-cover {
+	margin-top: 48px;
+	height: 440px;
+}
+
+.pd-cover .cover {
+	min-height: 100%;
+	border-radius: 24px;
+}
+
+.pd-grid {
+	display: grid;
+	grid-template-columns: 280px 1fr;
+	gap: 64px;
+	margin-top: 72px;
+}
+
+.pd-aside {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	align-self: start;
+	position: sticky;
+	top: 110px;
+}
+
+.pd-aside-block {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 14px;
+}
+
+.pd-stack {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.pd-summary {
+	margin: 0;
+	font-size: clamp(22px, 2.4vw, 30px);
+	line-height: 1.4;
+	letter-spacing: -0.01em;
+}
+
+.pd-highlights {
+	margin-top: 56px;
+}
+
+.pd-highlights h2 {
+	margin: 0 0 12px;
+	font-family: var(--display-font);
+	font-weight: 400;
+	font-style: italic;
+	font-size: 40px;
+	color: var(--accent);
+}
+
+.pd-highlights ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.pd-highlights li {
+	display: grid;
+	grid-template-columns: 52px 1fr;
+	gap: 12px;
+	padding: 20px 0;
+	border-bottom: 1px solid var(--line);
+	font-size: 17px;
+	color: var(--text);
+}
+
+.pd-num {
+	color: var(--accent);
+	padding-top: 3px;
+}
+
+.pd-next {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-top: 100px;
+	padding: 44px;
+	border-radius: 24px;
+	border: 1px solid var(--line-strong);
+	background: var(--panel);
+	transition: background 0.3s, border-color 0.3s;
+}
+
+.pd-next:hover {
+	background: var(--panel-strong);
+	border-color: var(--accent);
+}
+
+.pd-next-title {
+	font-family: var(--display-font);
+	font-size: clamp(36px, 5vw, 64px);
+	line-height: 1;
+}
+
+.pd-next-arrow {
+	display: inline-block;
+	color: var(--accent);
+	transition: transform 0.4s var(--ease);
+}
+
+.pd-next:hover .pd-next-arrow {
+	transform: translateX(10px);
+}
+
+@media (max-width: 860px) {
+	.pd-grid {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+	.pd-aside {
+		position: static;
+	}
+	.pd-cover {
+		height: 300px;
+	}
+	.pd-next {
+		padding: 28px;
+	}
+}

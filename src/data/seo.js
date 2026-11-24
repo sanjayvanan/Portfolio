@@ -1,37 +1,26 @@
+const KEYWORDS = [
+	"Sanjayvanan S G",
+	"Sanjayvanan",
+	"Software Engineer",
+	"Backend Engineer",
+	"Software Developer",
+	"Node.js",
+	"PostgreSQL",
+	"Bengaluru",
+];
+
 const SEO = [
 	{
 		page: "home",
 		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies.",
-		keywords: ["Sanjayvanan", "Sanjayvanan", "Sanjayvanan"],
+			"Sanjayvanan S G — Software Engineer in Bengaluru building scalable backend systems with Node.js, PostgreSQL, Redis and AWS, with end-to-end ownership in React.",
+		keywords: KEYWORDS,
 	},
-
-	{
-		page: "about",
-		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies.",
-		keywords: ["Sanjayvanan", "Sanjayvanan", "Sanjayvanan"],
-	},
-
-	{
-		page: "articles",
-		description:
-			"Chronological collection of my long-form thoughts on programming, leadership, product design, and more.",
-		keywords: ["Sanjayvanan", "Sanjayvanan", "Sanjayvanan"],
-	},
-
 	{
 		page: "projects",
 		description:
-			"I've worked on a variety of projects over the years and I'm proud of the progress I've made. Many of these projects are open-source and available for others to explore and contribute to.",
-		keywords: ["Sanjayvanan", "Sanjayvanan", "Sanjayvanan"],
-	},
-
-	{
-		page: "contact",
-		description:
-			"If you're interested in collaborating on a project, feel free to reach out to me. I'm always open to new ideas and opportunities.",
-		keywords: ["Sanjayvanan", "Sanjayvanan", "Sanjayvanan"],
+			"Selected work by Sanjayvanan S G — real-time auction and maritime surveillance platforms built with Node.js, PostgreSQL and React.",
+		keywords: KEYWORDS,
 	},
 ];
 
