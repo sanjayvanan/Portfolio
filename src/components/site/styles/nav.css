@@ -112,8 +112,17 @@
 	transform: translateY(1px);
 }
 
+/* Avatar sits inside a thin gold ring; the gradient behind it is the ring. */
+.nav-mark img {
+	width: calc(100% - 4px);
+	height: calc(100% - 4px);
+	border-radius: 50%;
+	object-fit: cover;
+	border: 1.5px solid #131510;
+}
+
 .nav-brand:hover .nav-mark {
-	transform: rotate(-8deg);
+	transform: scale(1.06);
 }
 
 .nav-id {
@@ -473,6 +482,12 @@
 	.nav-sheet-actions .nav-btn {
 		height: 48px;
 		font-size: 15px;
+	}
+}
+
+@media (max-width: 480px) {
+	.nav-role-domain {
+		display: none;
 	}
 }
 

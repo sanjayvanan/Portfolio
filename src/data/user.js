@@ -1,13 +1,15 @@
 const INFO = {
 	main: {
-		title: "Sanjayvanan S G — Software Engineer",
+		title: "Sanjayvanan S G — Software Engineer · Fintech",
 		name: "Sanjayvanan S G",
 		firstName: "Sanjayvanan",
 		role: "Software Engineer",
+		domain: "Fintech",
 		email: "sanjayvanan03@gmail.com",
 		location: "Bengaluru, India",
 		resume: "/resume.pdf",
-		avatar: "https://avatars.githubusercontent.com/u/102749975?v=4",
+		avatar: "/avatar.jpg",
+		headshot: "/headshot.jpg",
 		logo: "/logo.png",
 	},
 
@@ -19,10 +21,10 @@ const INFO = {
 	},
 
 	hero: {
-		status: "Software Engineer @ Agilavetri PrimeTech",
+		status: "Fintech Software Engineer @ Agilavetri PrimeTech",
 		companyLogo: "/AVGLOGO.jpeg",
 		summary:
-			"Software engineer building scalable backend systems with Node.js, PostgreSQL and AWS. I care about API design, database performance and production reliability — and I ship end to end, from schema to React UI, when the product needs it.",
+			"Software engineer building trading, payments and financial systems — the trading engine and settlement flows of a crypto exchange, a financial operations platform running across 78 branches, and payout engines trusted by 6,000+ users. Node.js, PostgreSQL and AWS underneath; correctness, latency and reliability are the job.",
 	},
 
 	stats: [
@@ -57,6 +59,7 @@ const INFO = {
 			location: "Bengaluru",
 			logo: "/AVGLOGO.jpeg",
 			current: true,
+			domains: ["Crypto exchange", "Financial operations", "Payouts & schemes"],
 			points: [
 				"Own end-to-end delivery across multiple production platforms — architecture, product logic and user-facing systems.",
 				"Cut processing time by 30% on an internal financial operations platform deployed across 78 branches by redesigning core workflows and optimising queries for thousands of concurrent users.",
@@ -155,6 +158,19 @@ const INFO = {
 			link: "https://github.com/sanjayvanan/Transportation-Management",
 		},
 	],
+
+	expo: {
+		event: "Forex Expo Dubai 2026",
+		role: "Exhibitor · Agilavetri PrimeTech",
+		venue: "Dubai World Trade Centre",
+		dates: "22–23 Sept 2026",
+		summary:
+			"Exhibited with Agilavetri PrimeTech at one of the region's major trading-industry events — two days with brokers, trading firms and fintech teams, talking through the exchange and financial platforms we build and hearing first-hand what the industry needs from its infrastructure.",
+		photos: [
+			{ src: "/expo/forex-expo-dubai-2026-wall.jpg", alt: "Sanjayvanan wearing an exhibitor badge in front of the Forex Expo Dubai 2026 backdrop" },
+			{ src: "/expo/forex-expo-dubai-2026-badge.jpg", alt: "Forex Expo Dubai 2026 exhibitor badge for Sanjayvanan S G, AVG" },
+		],
+	},
 
 	education: {
 		degree: "M.Sc Software Systems",

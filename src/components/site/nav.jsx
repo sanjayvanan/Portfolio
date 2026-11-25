@@ -25,6 +25,7 @@ const Nav = () => {
 	const isHome = location.pathname === "/";
 
 	const [scrolled, setScrolled] = useState(false);
+	const [avatarFailed, setAvatarFailed] = useState(false);
 	const [open, setOpen] = useState(false);
 	const [active, setActive] = useState(null);
 	const [hovered, setHovered] = useState(null);
@@ -118,13 +119,18 @@ const Nav = () => {
 			<div className="nav-capsule">
 				<Link to="/" className="nav-brand" onClick={close} aria-label={`${INFO.main.name} — home`}>
 					<span className="nav-mark" aria-hidden="true">
-						<span>SG</span>
+						{avatarFailed ? (
+							<span>SG</span>
+						) : (
+							<img src={INFO.main.avatar} alt="" onError={() => setAvatarFailed(true)} />
+						)}
 					</span>
 					<span className="nav-id">
 						<span className="nav-name">{INFO.main.firstName}</span>
 						<span className="nav-role">
 							<span className="nav-role-dot" />
-							Software Engineer
+							{INFO.main.role}
+							<span className="nav-role-domain"> · {INFO.main.domain}</span>
 						</span>
 					</span>
 				</Link>

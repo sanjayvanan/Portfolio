@@ -2,6 +2,11 @@ const KEYWORDS = [
 	"Sanjayvanan S G",
 	"Sanjayvanan",
 	"Software Engineer",
+	"Fintech Software Engineer",
+	"Fintech",
+	"Trading systems",
+	"Payments",
+	"Crypto exchange",
 	"Backend Engineer",
 	"Software Developer",
 	"Node.js",
@@ -13,7 +18,7 @@ const SEO = [
 	{
 		page: "home",
 		description:
-			"Sanjayvanan S G — Software Engineer in Bengaluru building scalable backend systems with Node.js, PostgreSQL, Redis and AWS, with end-to-end ownership in React.",
+			"Sanjayvanan S G — Fintech Software Engineer in Bengaluru building trading, payments and financial systems: crypto exchange trading engines, settlement flows and financial platforms on Node.js, PostgreSQL and AWS.",
 		keywords: KEYWORDS,
 	},
 	{

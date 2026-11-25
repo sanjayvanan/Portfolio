@@ -171,7 +171,8 @@
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	filter: grayscale(0.25) contrast(1.05);
+	object-position: 50% 28%;
+	filter: contrast(1.04) saturate(0.95);
 }
 
 .terminal {
@@ -464,6 +465,30 @@
 	font-size: 15px;
 }
 
+.job-domains {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px;
+	margin-top: 16px;
+}
+
+.job-domains-label {
+	margin-right: 4px;
+	font-size: 10.5px;
+	color: var(--accent);
+}
+
+.job-domain {
+	padding: 4px 10px;
+	border-radius: 999px;
+	font-size: 12.5px;
+	font-weight: 500;
+	color: #ffd68a;
+	background: var(--accent-soft);
+	box-shadow: inset 0 0 0 1px rgba(255, 176, 46, 0.25);
+}
+
 .job-note {
 	margin: 16px 0 0;
 	padding: 10px 14px;
@@ -663,6 +688,162 @@
 	transform: translate(3px, -3px);
 }
 
+/* ---------- expo ---------- */
+.expo {
+	display: grid;
+	grid-template-columns: 1.05fr 1fr;
+	gap: 64px;
+	align-items: center;
+}
+
+.expo-photos {
+	position: relative;
+	height: 620px;
+}
+
+.expo-photo {
+	position: absolute;
+	margin: 0;
+	overflow: hidden;
+	border-radius: 22px;
+	border: 1px solid var(--line-strong);
+	background: var(--bg-raised);
+	box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.85);
+	transition: transform 0.7s var(--ease);
+}
+
+.expo-photo img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: saturate(0.92) contrast(1.03);
+}
+
+/* warm the event's magenta toward the site palette */
+.expo-photo::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background:
+		linear-gradient(180deg, transparent 55%, rgba(12, 13, 11, 0.5)),
+		linear-gradient(135deg, rgba(255, 176, 46, 0.12), transparent 50%);
+	pointer-events: none;
+}
+
+.expo-photo-main {
+	left: 0;
+	top: 0;
+	width: 64%;
+	height: 94%;
+	transform: rotate(-2deg);
+	z-index: 1;
+}
+
+.expo-photo-main img {
+	object-position: 35% 50%;
+}
+
+.expo-photo-badge {
+	right: 0;
+	bottom: 4%;
+	width: 44%;
+	height: 56%;
+	transform: rotate(4deg);
+	z-index: 2;
+}
+
+.expo-photo-badge img {
+	object-position: 58% 38%;
+}
+
+.expo-photo-badge::after {
+	background: linear-gradient(180deg, transparent 60%, rgba(12, 13, 11, 0.55));
+}
+
+.expo-photos:hover .expo-photo-main {
+	transform: rotate(-3deg) translateX(-6px);
+}
+
+.expo-photos:hover .expo-photo-badge {
+	transform: rotate(6deg) translate(6px, 4px);
+}
+
+.expo-stamp {
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+	z-index: 1;
+	padding: 8px 12px;
+	border-radius: 10px;
+	border: 1px dashed rgba(255, 176, 46, 0.5);
+	background: rgba(12, 13, 11, 0.7);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	color: var(--accent);
+	font-size: 10.5px;
+}
+
+.expo-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	padding: 7px 14px 7px 12px;
+	border-radius: 999px;
+	border: 1px solid var(--line);
+	background: var(--panel);
+	font-family: var(--mono-font);
+	font-size: 11.5px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+.expo-title {
+	margin: 22px 0 0;
+	font-family: var(--body-font);
+	font-weight: 500;
+	font-size: clamp(36px, 4.4vw, 58px);
+	line-height: 1.02;
+	letter-spacing: -0.03em;
+}
+
+.expo-summary {
+	margin: 22px 0 0;
+	max-width: 52ch;
+	color: var(--muted);
+	font-size: 16.5px;
+	line-height: 1.7;
+}
+
+.expo-facts {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	justify-content: start;
+	gap: 0;
+	margin: 32px 0 0;
+	border-top: 1px solid var(--line);
+}
+
+.expo-facts div {
+	padding: 18px 28px 0 0;
+	margin-right: 28px;
+	border-right: 1px solid var(--line);
+}
+
+.expo-facts div:last-child {
+	border-right: 0;
+	margin-right: 0;
+}
+
+.expo-facts dt {
+	font-size: 10.5px;
+}
+
+.expo-facts dd {
+	margin: 6px 0 0;
+	font-size: 15px;
+	font-weight: 500;
+}
+
 /* ---------- background ---------- */
 .bg-grid {
 	display: grid;
@@ -826,6 +1007,13 @@
 	.project-cover {
 		min-height: 280px;
 	}
+	.expo {
+		grid-template-columns: 1fr;
+		gap: 48px;
+	}
+	.expo-photos {
+		max-width: 600px;
+	}
 }
 
 @media (max-width: 760px) {
@@ -887,6 +1075,18 @@
 	.skills,
 	.bg-grid {
 		grid-template-columns: 1fr;
+	}
+	.expo-photos {
+		height: 460px;
+	}
+	.expo-facts {
+		grid-template-columns: 1fr 1fr;
+		row-gap: 4px;
+	}
+	.expo-facts div {
+		margin-right: 0;
+		padding-right: 16px;
+		border-right: 0;
 	}
 	.earlier-row {
 		grid-template-columns: 1fr 30px;

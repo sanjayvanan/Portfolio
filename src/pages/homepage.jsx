@@ -115,7 +115,7 @@ const Homepage = () => {
 								<div className="hero-photo-fallback">SG</div>
 							) : (
 								<img
-									src={INFO.main.avatar}
+									src={INFO.main.headshot}
 									alt={INFO.main.name}
 									onError={() => setPhotoFailed(true)}
 								/>
@@ -134,9 +134,10 @@ const Homepage = () => {
 								{"{"}
 								{"\n"}  <span className="t-key">"name"</span>: <span className="t-str">"Sanjayvanan S G"</span>,
 								{"\n"}  <span className="t-key">"role"</span>: <span className="t-str">"Software Engineer"</span>,
+								{"\n"}  <span className="t-key">"domain"</span>: <span className="t-str">"fintech"</span>,
 								{"\n"}  <span className="t-key">"stack"</span>: [<span className="t-str">"node"</span>, <span className="t-str">"postgres"</span>, <span className="t-str">"redis"</span>, <span className="t-str">"aws"</span>],
 								{"\n"}  <span className="t-key">"latency"</span>: <span className="t-num">"-28%"</span>,
-								{"\n"}  <span className="t-key">"focus"</span>: <span className="t-str">"reliable money systems"</span>
+								{"\n"}  <span className="t-key">"focus"</span>: <span className="t-str">"trading · settlement · payouts"</span>
 								{"\n"}
 								{"}"}
 								{"\n"}<span className="t-prompt">$</span> <span className="caret" />
@@ -200,6 +201,16 @@ const Homepage = () => {
 											<div className="job-role">{job.role}</div>
 										</div>
 									</div>
+									{job.domains && (
+										<div className="job-domains">
+											<span className="job-domains-label mono">Fintech</span>
+											{job.domains.map((d) => (
+												<span className="job-domain" key={d}>
+													{d}
+												</span>
+											))}
+										</div>
+									)}
 									{job.note && <p className="job-note">{job.note}</p>}
 									<ul className="job-points">
 										{job.points.map((p) => (
@@ -286,9 +297,53 @@ const Homepage = () => {
 					</Reveal>
 				</section>
 
+				{/* ---------------- EXPO ---------------- */}
+				<section className="section container" id="expo">
+					<SectionHead index="04 — On the ground">
+						In the room with <em>the industry</em>
+					</SectionHead>
+
+					<div className="expo">
+						<Reveal className="expo-photos">
+							<figure className="expo-photo expo-photo-main">
+								<img src={INFO.expo.photos[0].src} alt={INFO.expo.photos[0].alt} loading="lazy" />
+							</figure>
+							<figure className="expo-photo expo-photo-badge">
+								<img src={INFO.expo.photos[1].src} alt={INFO.expo.photos[1].alt} loading="lazy" />
+								<figcaption className="expo-stamp mono">Exhibitor pass</figcaption>
+							</figure>
+						</Reveal>
+
+						<Reveal className="expo-body" delay={120}>
+							<span className="expo-badge">
+								<span className="pulse" />
+								{INFO.expo.role}
+							</span>
+							<h3 className="expo-title">
+								Forex Expo <em className="serif-accent">Dubai</em> 2026
+							</h3>
+							<p className="expo-summary">{INFO.expo.summary}</p>
+							<dl className="expo-facts">
+								<div>
+									<dt className="mono">Venue</dt>
+									<dd>{INFO.expo.venue}</dd>
+								</div>
+								<div>
+									<dt className="mono">Dates</dt>
+									<dd>{INFO.expo.dates}</dd>
+								</div>
+								<div>
+									<dt className="mono">Role</dt>
+									<dd>Exhibitor</dd>
+								</div>
+							</dl>
+						</Reveal>
+					</div>
+				</section>
+
 				{/* ---------------- RECOGNITION ---------------- */}
 				<section className="section container" id="recognition">
-					<SectionHead index="04 — Background">
+					<SectionHead index="05 — Background">
 						Education & <em>wins</em>
 					</SectionHead>
 
@@ -321,7 +376,7 @@ const Homepage = () => {
 				{/* ---------------- CONTACT ---------------- */}
 				<section className="section container" id="contact">
 					<Reveal className="contact">
-						<span className="mono">05 — Contact</span>
+						<span className="mono">06 — Contact</span>
 						<h2 className="contact-title">
 							Got a system that needs to be <em className="serif-accent">faster</em>,{" "}
 							<em className="serif-accent">safer</em>, or simply <em className="serif-accent">built</em>?
