@@ -1103,3 +1103,55 @@
 		padding: 48px 24px;
 	}
 }
+
+/* ---------- hero: keep the face visible on tablet & mobile ---------- */
+@media (max-width: 1024px) {
+	.hero-right {
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.hero-photo {
+		position: relative;
+		top: auto;
+		right: auto;
+		width: min(78%, 380px);
+		margin-left: auto;
+		margin-right: 4%;
+	}
+	.hero-photo img {
+		object-position: center 20%;
+	}
+	.terminal {
+		position: relative;
+		left: auto;
+		bottom: auto;
+		width: 100%;
+		max-width: 520px;
+		margin-top: -48px;
+	}
+}
+
+@media (max-width: 760px) {
+	.hero-right {
+		height: auto;
+	}
+	.hero-photo {
+		width: 80%;
+		margin-right: 2%;
+	}
+	.terminal {
+		margin-top: -36px;
+	}
+}
+
+/* ---------- hero (laptop/desktop): terminal sits below the face ---------- */
+@media (min-width: 1025px) {
+	.hero-right {
+		height: 600px;
+	}
+	.hero-photo img {
+		object-position: center 20%;
+	}
+}
