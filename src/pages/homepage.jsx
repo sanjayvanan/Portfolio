@@ -303,41 +303,62 @@ const Homepage = () => {
 						In the room with <em>the industry</em>
 					</SectionHead>
 
-					<div className="expo">
-						<Reveal className="expo-photos">
-							<figure className="expo-photo expo-photo-main">
-								<img src={INFO.expo.photos[0].src} alt={INFO.expo.photos[0].alt} loading="lazy" />
-							</figure>
-							<figure className="expo-photo expo-photo-badge">
-								<img src={INFO.expo.photos[1].src} alt={INFO.expo.photos[1].alt} loading="lazy" />
-								<figcaption className="expo-stamp mono">Exhibitor pass</figcaption>
-							</figure>
-						</Reveal>
+					<div className="expo-list">
+						{INFO.expos.map((ex, i) => (
+							<div className={`expo ${i % 2 ? "expo-flip" : ""}`} key={ex.titleLead + ex.titleAccent}>
+								<Reveal className="expo-photos">
+									<figure className="expo-photo expo-photo-main">
+										<img
+											src={ex.photos[0].src}
+											alt={ex.photos[0].alt}
+											style={{ objectPosition: ex.photos[0].position }}
+											loading="lazy"
+										/>
+									</figure>
+									<figure className="expo-photo expo-photo-badge">
+										<img
+											src={ex.photos[1].src}
+											alt={ex.photos[1].alt}
+											style={{ objectPosition: ex.photos[1].position }}
+											loading="lazy"
+										/>
+										<figcaption className="expo-stamp mono">{ex.stamp}</figcaption>
+									</figure>
+								</Reveal>
 
-						<Reveal className="expo-body" delay={120}>
-							<span className="expo-badge">
-								<span className="pulse" />
-								{INFO.expo.role}
-							</span>
-							<h3 className="expo-title">
-								Forex Expo <em className="serif-accent">Dubai</em> 2026
-							</h3>
-							<p className="expo-summary">{INFO.expo.summary}</p>
-							<dl className="expo-facts">
-								<div>
-									<dt className="mono">Venue</dt>
-									<dd>{INFO.expo.venue}</dd>
-								</div>
-								<div>
-									<dt className="mono">Dates</dt>
-									<dd>{INFO.expo.dates}</dd>
-								</div>
-								<div>
-									<dt className="mono">Role</dt>
-									<dd>Exhibitor</dd>
-								</div>
-							</dl>
-						</Reveal>
+								<Reveal className="expo-body" delay={120}>
+									<span className="expo-badge">
+										<span className="pulse" />
+										{ex.role}
+									</span>
+									<h3 className="expo-title">
+										{ex.titleLead}
+										<em className="serif-accent">{ex.titleAccent}</em>
+										{ex.titleTail}
+									</h3>
+									<p className="expo-summary">{ex.summary}</p>
+									<dl className="expo-facts">
+										<div>
+											<dt className="mono">Venue</dt>
+											<dd>{ex.venue}</dd>
+										</div>
+										<div>
+											<dt className="mono">Dates</dt>
+											<dd>{ex.dates}</dd>
+										</div>
+										<div>
+											<dt className="mono">Role</dt>
+											<dd>Exhibitor</dd>
+										</div>
+									</dl>
+									{ex.project && (
+										<Link to={`/projects/${ex.project}`} className="btn expo-project">
+											See the system I built <span className="btn-arrow">→</span>
+										</Link>
+									)}
+								</Reveal>
+							</div>
+						))}
 					</div>
 				</section>
 

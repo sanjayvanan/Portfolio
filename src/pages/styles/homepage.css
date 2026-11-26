@@ -1155,3 +1155,45 @@
 		object-position: center 20%;
 	}
 }
+
+/* ---------- multiple expos ---------- */
+.expo-list {
+	display: flex;
+	flex-direction: column;
+	gap: 120px;
+}
+
+@media (min-width: 1025px) {
+	.expo-flip {
+		grid-template-columns: 1fr 1.05fr;
+	}
+	.expo-flip .expo-photos {
+		order: 2;
+	}
+	.expo-flip .expo-photo-main {
+		left: auto;
+		right: 0;
+		transform: rotate(2deg);
+	}
+	.expo-flip .expo-photo-badge {
+		right: auto;
+		left: 0;
+		transform: rotate(-4deg);
+	}
+	.expo-flip .expo-photos:hover .expo-photo-main {
+		transform: rotate(3deg) translateX(6px);
+	}
+	.expo-flip .expo-photos:hover .expo-photo-badge {
+		transform: rotate(-6deg) translate(-6px, 4px);
+	}
+}
+
+@media (max-width: 760px) {
+	.expo-list {
+		gap: 80px;
+	}
+}
+
+.expo-project {
+	margin-top: 32px;
+}

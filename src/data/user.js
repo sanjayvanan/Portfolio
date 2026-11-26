@@ -79,6 +79,7 @@ const INFO = {
 				"Architected RESTful APIs and modular service layers on clean-architecture principles, speeding up feature delivery by 20%.",
 				"Designed normalised PostgreSQL schemas for high-volume operational data, improving query performance by 35%.",
 				"Introduced Redis caching, cutting database load by 22%; implemented JWT auth and role-based access control.",
+				"Exhibited at Aero India 2025 (Air Force Station Yelahanka, Bengaluru), showcasing the company's maritime defence system — real-time vessel traffic monitoring using AIS and radar.",
 			],
 		},
 		{
@@ -159,18 +160,39 @@ const INFO = {
 		},
 	],
 
-	expo: {
-		event: "Forex Expo Dubai 2026",
-		role: "Exhibitor · Agilavetri PrimeTech",
-		venue: "Dubai World Trade Centre",
-		dates: "22–23 Sept 2026",
-		summary:
-			"Exhibited with Agilavetri PrimeTech at one of the region's major trading-industry events — two days with brokers, trading firms and fintech teams, talking through the exchange and financial platforms we build and hearing first-hand what the industry needs from its infrastructure.",
-		photos: [
-			{ src: "/expo/forex-expo-dubai-2026-wall.jpg", alt: "Sanjayvanan wearing an exhibitor badge in front of the Forex Expo Dubai 2026 backdrop" },
-			{ src: "/expo/forex-expo-dubai-2026-badge.jpg", alt: "Forex Expo Dubai 2026 exhibitor badge for Sanjayvanan S G, AVG" },
-		],
-	},
+	expos: [
+		{
+			titleLead: "Forex Expo ",
+			titleAccent: "Dubai",
+			titleTail: " 2026",
+			role: "Exhibitor · Agilavetri PrimeTech",
+			venue: "Dubai World Trade Centre",
+			dates: "22–23 Sept 2026",
+			summary:
+				"Exhibited with Agilavetri PrimeTech at one of the region's major trading-industry events — two days with brokers, trading firms and fintech teams, talking through the exchange and financial platforms we build and hearing first-hand what the industry needs from its infrastructure.",
+			stamp: "Exhibitor pass",
+			photos: [
+				{ src: "/expo/forex-expo-dubai-2026-wall.jpg", alt: "Sanjayvanan wearing an exhibitor badge in front of the Forex Expo Dubai 2026 backdrop", position: "35% 50%" },
+				{ src: "/expo/forex-expo-dubai-2026-badge.jpg", alt: "Forex Expo Dubai 2026 exhibitor badge for Sanjayvanan S G, AVG", position: "58% 38%" },
+			],
+		},
+		{
+			titleLead: "Aero ",
+			titleAccent: "India",
+			titleTail: " 2025",
+			role: "Exhibitor · Zosh Aerospace",
+			venue: "Air Force Station Yelahanka, Bengaluru",
+			dates: "10–14 Feb 2025",
+			summary:
+				"Represented Zosh Aerospace as an exhibitor at Aero India 2025, Asia's largest aerospace and defence show — five days showcasing our maritime defence system, which tracks live vessel traffic by fusing AIS and radar data, to defence organisations, aerospace manufacturers and industry visitors.",
+			project: "coastal-surveillance",
+			stamp: "Exhibition hall · Aero India",
+			photos: [
+				{ src: "/expo/aero-india-2025-static-display.jpg", alt: "Indian Air Force transport aircraft on the static display at Aero India 2025, Air Force Station Yelahanka", position: "45% 55%" },
+				{ src: "/expo/aero-india-2025-stall.jpg", alt: "Drone and light-aircraft models on display in the exhibition hall at Aero India 2025", position: "62% 45%" },
+			],
+		},
+	],
 
 	education: {
 		degree: "M.Sc Software Systems",
